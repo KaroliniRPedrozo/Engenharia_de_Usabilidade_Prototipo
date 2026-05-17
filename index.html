@@ -6,9 +6,7 @@
     <title>LATAM Airlines - Checkout Simplificado</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <header class="checkout-header">
+<header class="checkout-header">
         <div class="header-container">
             <span class="logo-latam">LATAM <span class="logo-suffix">Airlines</span></span>
             <div class="stepper">
@@ -22,7 +20,6 @@
     <main class="main-container">
         
         <section class="selection-area">
-            
             <div class="section-card">
                 <h2>Selecione suas Bagagens</h2>
                 <p class="subtitle">Escolha a melhor opção para a sua viagem com total transparência.</p>
@@ -44,7 +41,7 @@
                         <p class="baggage-desc">Despachada no balcão do aeroporto. Ideal para viagens longas.</p>
                         <div class="baggage-footer">
                             <span class="price">R$ 120,00</span>
-                            <button class="btn-baggage">Adicionar</button>
+                            <button class="btn-baggage" id="btn-add-baggage">Adicionar</button>
                         </div>
                     </div>
                 </div>
@@ -55,14 +52,13 @@
                 <p class="subtitle">Preencha os dados para o envio do comprovante.</p>
                 
                 <form class="contact-form" onsubmit="return false;">
-                    <div class="input-group error">
+                    <div class="input-group error" id="email-group">
                         <label for="email">E-mail para Notificações</label>
                         <input type="email" id="email" value="roberto.estudante" placeholder="exemplo@email.com">
-                        <span class="helper-text">⚠️ Formato inválido. Verifique se esqueceu de colocar o "@" ou o ".com".</span>
+                        <span class="helper-text" id="email-helper">⚠️ Formato inválido. Verifique se esqueceu de colocar o "@" ou o ".com".</span>
                     </div>
                 </form>
             </div>
-
         </section>
 
         <aside class="sticky-cart">
@@ -70,21 +66,21 @@
                 <h3>Resumo da Viagem</h3>
                 <hr>
                 <div class="cart-item">
-                    <span>Voo de Ida (Florianópolis ➔ São Paulo)</span>
+                    <span>Voo de Ida</span>
                     <strong>R$ 350,00</strong>
                 </div>
                 <div class="cart-item">
                     <span>Mala de Mão (10kg)</span>
                     <strong class="free">Grátis</strong>
                 </div>
-                <div class="cart-item hidden-item">
+                <div class="cart-item hidden-item" id="cart-baggage-item">
                     <span>Mala Despachada (23kg)</span>
                     <strong>R$ 120,00</strong>
                 </div>
                 <hr>
                 <div class="cart-total">
                     <span>Total da sua compra:</span>
-                    <span class="total-price">R$ 350,00</span>
+                    <span class="total-price" id="cart-total-price">R$ 350,00</span>
                 </div>
                 <button class="btn-submit">Ir para o Pagamento</button>
             </div>
@@ -92,5 +88,5 @@
 
     </main>
 
-</body>
+    <script src="script.js"></script>
 </html>

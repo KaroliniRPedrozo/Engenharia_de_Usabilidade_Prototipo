@@ -280,3 +280,42 @@ hr {
 .btn-submit:hover {
     background-color: #e0004c;
 }
+
+/* Classes para o JavaScript controlar */
+.hidden-item {
+    display: none !important;
+}
+
+.btn-baggage.remove-state {
+    border-color: var(--error-color);
+    color: var(--error-color);
+}
+
+.btn-baggage.remove-state:hover {
+    background-color: var(--error-color);
+    color: white;
+}
+
+.input-group.success input {
+    border-color: #16a34a; /* Verde sucesso */
+    background-color: #f0fdf4;
+}
+.input-group.success .helper-text {
+    color: #16a34a;
+}
+
+/* Deixando responsivo para celular (Para ganhar pontos extras!) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .baggage-grid {
+        flex-direction: column;
+    }
+    .sticky-cart {
+        position: static;
+    }
+    .stepper {
+        display: none; /* Esconde passos no celular para economizar espaço */
+    }
+}
