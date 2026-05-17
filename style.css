@@ -1,0 +1,282 @@
+/* Configurações Gerais de Design System */
+:root {
+    --latam-blue: #1b004a;
+    --latam-coral: #ff0055;
+    --bg-light: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --border-color: #e5e7eb;
+    --error-color: #dc2626;
+    --error-bg: #fef2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+}
+
+/* Cabeçalho Isolado */
+.checkout-header {
+    background-color: var(--latam-blue);
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-latam {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.logo-suffix {
+    color: var(--latam-coral);
+}
+
+.stepper {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.step {
+    opacity: 0.5;
+}
+
+.step.done {
+    opacity: 0.8;
+    text-decoration: line-through;
+}
+
+.step.active {
+    opacity: 1;
+    font-weight: bold;
+    border-bottom: 2px solid var(--latam-coral);
+}
+
+/* Layout Principal em Duas Colunas */
+.main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.selection-area {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Estrutura dos Containers Brancos */
+.section-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.section-card h2 {
+    color: var(--latam-blue);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Grid de Cards de Bagagem */
+.baggage-grid {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.baggage-card {
+    flex: 1;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.baggage-card:hover {
+    border-color: #a5b4fc;
+    transform: translateY(-2px);
+}
+
+.baggage-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.baggage-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.baggage-desc {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+.baggage-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--latam-blue);
+}
+
+.btn-baggage {
+    background-color: transparent;
+    border: 2px solid var(--latam-blue);
+    color: var(--latam-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-baggage:hover {
+    background-color: var(--latam-blue);
+    color: white;
+}
+
+.btn-baggage.included {
+    border-color: var(--border-color);
+    color: var(--text-muted);
+    background-color: var(--bg-light);
+    cursor: not-allowed;
+}
+
+/* Formulário e Validação com Foco Ergonômico */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Estado de Erro Construtivo (Promessa 3) */
+.input-group.error input {
+    border-color: var(--error-color);
+    background-color: var(--error-bg);
+}
+
+.helper-text {
+    font-size: 0.85rem;
+    color: var(--error-color);
+    font-weight: 500;
+}
+
+/* Carrinho de Compras Persistente (Sticky - Promessa 2) */
+.sticky-cart {
+    flex: 1;
+    position: sticky;
+    top: 2rem; /* Mantém o componente fixo ao rolar a página */
+    height: fit-content;
+}
+
+.cart-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--latam-coral);
+}
+
+.cart-card h3 {
+    color: var(--latam-blue);
+    margin-bottom: 1rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 1rem 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted);
+}
+
+.cart-item strong.free {
+    color: #16a34a;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.total-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--latam-blue);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--latam-coral);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 0, 85, 0.2);
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #e0004c;
+}

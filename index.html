@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATAM Airlines - Checkout Simplificado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="checkout-header">
+        <div class="header-container">
+            <span class="logo-latam">LATAM <span class="logo-suffix">Airlines</span></span>
+            <div class="stepper">
+                <span class="step done">1. Voos</span>
+                <span class="step active">2. Personalização</span>
+                <span class="step">3. Confirmação</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        
+        <section class="selection-area">
+            
+            <div class="section-card">
+                <h2>Selecione suas Bagagens</h2>
+                <p class="subtitle">Escolha a melhor opção para a sua viagem com total transparência.</p>
+                
+                <div class="baggage-grid">
+                    <div class="baggage-card">
+                        <div class="baggage-icon">🧳</div>
+                        <h3>Mala de Mão (10kg)</h3>
+                        <p class="baggage-desc">Inclusa na sua tarifa. Deve caber no compartimento superior.</p>
+                        <div class="baggage-footer">
+                            <span class="price">R$ 0,00</span>
+                            <button class="btn-baggage included" disabled>Incluso</button>
+                        </div>
+                    </div>
+
+                    <div class="baggage-card">
+                        <div class="baggage-icon">🧳</div>
+                        <h3>Mala Despachada (23kg)</h3>
+                        <p class="baggage-desc">Despachada no balcão do aeroporto. Ideal para viagens longas.</p>
+                        <div class="baggage-footer">
+                            <span class="price">R$ 120,00</span>
+                            <button class="btn-baggage">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h2>Informações de Contato</h2>
+                <p class="subtitle">Preencha os dados para o envio do comprovante.</p>
+                
+                <form class="contact-form" onsubmit="return false;">
+                    <div class="input-group error">
+                        <label for="email">E-mail para Notificações</label>
+                        <input type="email" id="email" value="roberto.estudante" placeholder="exemplo@email.com">
+                        <span class="helper-text">⚠️ Formato inválido. Verifique se esqueceu de colocar o "@" ou o ".com".</span>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <aside class="sticky-cart">
+            <div class="cart-card">
+                <h3>Resumo da Viagem</h3>
+                <hr>
+                <div class="cart-item">
+                    <span>Voo de Ida (Florianópolis ➔ São Paulo)</span>
+                    <strong>R$ 350,00</strong>
+                </div>
+                <div class="cart-item">
+                    <span>Mala de Mão (10kg)</span>
+                    <strong class="free">Grátis</strong>
+                </div>
+                <div class="cart-item hidden-item">
+                    <span>Mala Despachada (23kg)</span>
+                    <strong>R$ 120,00</strong>
+                </div>
+                <hr>
+                <div class="cart-total">
+                    <span>Total da sua compra:</span>
+                    <span class="total-price">R$ 350,00</span>
+                </div>
+                <button class="btn-submit">Ir para o Pagamento</button>
+            </div>
+        </aside>
+
+    </main>
+
+</body>
+</html>
