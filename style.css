@@ -319,3 +319,88 @@ hr {
         display: none; /* Esconde passos no celular para economizar espaço */
     }
 }
+/* Estilos do Modal de Sucesso */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 0, 74, 0.8); /* Azul da LATAM com transparência */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.modal-content h2 {
+    color: var(--latam-blue);
+    margin-bottom: 1rem;
+}
+
+.modal-details {
+    background-color: var(--bg-light);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.modal-details p {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo do Bilhete (Ticket) dentro do Modal */
+.modal-ticket {
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    text-align: left;
+    border: 1px solid var(--border-color);
+    overflow: hidden; /* Mantém os cantos arredondados */
+}
+
+.ticket-header {
+    background-color: var(--latam-blue);
+    color: white;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.ticket-body {
+    padding: 1rem;
+}
+
+.ticket-body p {
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.highlight-text {
+    color: var(--latam-coral);
+    font-weight: 600;
+}
+
+.ticket-total {
+    font-size: 1.15rem !important;
+    color: var(--latam-blue) !important;
+    margin-top: 1rem;
+}

@@ -6,7 +6,9 @@
     <title>LATAM Airlines - Checkout Simplificado</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<header class="checkout-header">
+<body>
+
+    <header class="checkout-header">
         <div class="header-container">
             <span class="logo-latam">LATAM <span class="logo-suffix">Airlines</span></span>
             <div class="stepper">
@@ -20,6 +22,7 @@
     <main class="main-container">
         
         <section class="selection-area">
+            
             <div class="section-card">
                 <h2>Selecione suas Bagagens</h2>
                 <p class="subtitle">Escolha a melhor opção para a sua viagem com total transparência.</p>
@@ -59,6 +62,7 @@
                     </div>
                 </form>
             </div>
+
         </section>
 
         <aside class="sticky-cart">
@@ -66,7 +70,7 @@
                 <h3>Resumo da Viagem</h3>
                 <hr>
                 <div class="cart-item">
-                    <span>Voo de Ida</span>
+                    <span>Voo de Ida (Florianópolis ➔ São Paulo)</span>
                     <strong>R$ 350,00</strong>
                 </div>
                 <div class="cart-item">
@@ -88,5 +92,33 @@
 
     </main>
 
+    <div id="success-modal" class="modal-overlay hidden-item">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h2>Tudo pronto, Roberto!</h2>
+            <p>Suas preferências foram salvas. Você será redirecionado para o pagamento seguro.</p>
+            
+            <div class="modal-ticket">
+                <div class="ticket-header">
+                    <span>✈️ Voo LA3304</span>
+                    <span>12 Jun 2026</span>
+                </div>
+                <div class="ticket-body">
+                    <p><strong>Passageiro:</strong> Roberto Silva</p>
+                    <p><strong>Documento:</strong> ***.456.789-**</p>
+                    <p><strong>Trecho:</strong> Florianópolis (FLN) ➔ São Paulo (GRU)</p>
+                    <p><strong>Comprovante para:</strong> <span id="modal-email" class="highlight-text">...</span></p>
+                    <hr>
+                    <p class="ticket-total"><strong>Total a pagar:</strong> <span id="modal-price">R$ 350,00</span></p>
+                </div>
+            </div>
+
+            <button class="btn-submit" style="margin-bottom: 1rem;">Ir para ambiente de pagamento</button>
+            <button class="btn-baggage" id="btn-close-modal">Voltar para edição</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+
+</body>
 </html>
