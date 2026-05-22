@@ -404,3 +404,64 @@ hr {
     color: var(--latam-blue) !important;
     margin-top: 1rem;
 }
+
+/* =========================================
+   NOVOS COMPONENTES: ESPECIFICAÇÕES E TOAST
+   ========================================= */
+
+/* Tags de Especificação da Bagagem */
+.baggage-specs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.spec-tag {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+}
+
+/* Toast Notification de Recuperação de Erro */
+.toast-notification {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--latam-blue);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    font-size: 0.95rem;
+}
+
+.toast-notification.show {
+    bottom: 2rem;
+}
+
+.btn-undo {
+    background: transparent;
+    color: #ff8a9f; /* Tom de coral mais claro para contraste no fundo escuro */
+    border: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.btn-undo:hover {
+    color: var(--latam-coral);
+    text-decoration: underline;
+}

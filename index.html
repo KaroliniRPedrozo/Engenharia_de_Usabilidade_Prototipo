@@ -31,6 +31,10 @@
                     <div class="baggage-card">
                         <div class="baggage-icon">🧳</div>
                         <h3>Mala de Mão (10kg)</h3>
+                        <div class="baggage-specs">
+                            <span class="spec-tag">⚖️ Até 10kg</span>
+                            <span class="spec-tag">📏 55x35x25 cm</span>
+                        </div>
                         <p class="baggage-desc">Inclusa na sua tarifa. Deve caber no compartimento superior.</p>
                         <div class="baggage-footer">
                             <span class="price">R$ 0,00</span>
@@ -41,6 +45,10 @@
                     <div class="baggage-card">
                         <div class="baggage-icon">🧳</div>
                         <h3>Mala Despachada (23kg)</h3>
+                        <div class="baggage-specs">
+                            <span class="spec-tag">⚖️ Até 23kg</span>
+                            <span class="spec-tag">📏 158 cm lineares</span>
+                        </div>
                         <p class="baggage-desc">Despachada no balcão do aeroporto. Ideal para viagens longas.</p>
                         <div class="baggage-footer">
                             <span class="price">R$ 120,00</span>
@@ -116,6 +124,11 @@
             <button class="btn-submit" style="margin-bottom: 1rem;">Ir para ambiente de pagamento</button>
             <button class="btn-baggage" id="btn-close-modal">Voltar para edição</button>
         </div>
+    </div>
+
+    <div id="undo-toast" class="toast-notification">
+        <span>Item removido da sua viagem.</span>
+        <button class="btn-undo" id="btn-undo">Desfazer</button>
     </div>
 
     <script src="script.js"></script>
